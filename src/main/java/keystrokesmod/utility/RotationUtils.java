@@ -1,7 +1,7 @@
 package keystrokesmod.utility;
 
 import com.google.common.base.Predicates;
-import keystrokesmod.event.PreMotionEvent;
+import keystrokesmod.event.player.PreMotionEvent;
 import keystrokesmod.module.impl.other.RotationHandler;
 import keystrokesmod.module.impl.other.anticheats.utils.world.PlayerRotation;
 import net.minecraft.client.Minecraft;
@@ -132,10 +132,10 @@ public class RotationUtils {
             final int n12 = (int) RotationHandler.randomYawFactor.getInput();
             if (n12 != 0) {
                 final int n13 = n12 * 100 + Utils.randomizeInt(-30, 30);
-                n += Utils.randomizeInt(-n13, n13) / 100.0;
+                n += (float) (Utils.randomizeInt(-n13, n13) / 100.0);
             }
         } else if (abs <= 0.04) {
-            n += ((abs > 0.0f) ? 0.01 : -0.01);
+            n += ((abs > 0.0f) ? 0.01f : -0.01f);
         }
         return new float[]{n, clampTo90(n2)};
     }

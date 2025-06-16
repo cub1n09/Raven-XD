@@ -1,6 +1,6 @@
 package keystrokesmod.module.impl.other;
 
-import keystrokesmod.event.PreUpdateEvent;
+import keystrokesmod.event.player.PreUpdateEvent;
 import keystrokesmod.mixins.impl.client.PlayerControllerMPAccessor;
 import keystrokesmod.module.Module;
 import keystrokesmod.module.setting.impl.ModeSetting;
@@ -9,8 +9,7 @@ import keystrokesmod.module.setting.utils.ModeOnly;
 import keystrokesmod.utility.CoolDown;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.eventhandler.EventPriority;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import keystrokesmod.eventbus.annotations.EventListener;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -33,11 +32,12 @@ public final class SlotHandler extends Module {
         return mc.thePlayer.inventory.currentItem;
     }
 
-    public static void setCurrentSlot(int slot) {
+    public static boolean setCurrentSlot(int slot) {
         if (slot >= 0 && slot < 9) {
             currentSlot.set(slot);
             coolDown.start();
         }
+        return false;
     }
 
     public static @Nullable ItemStack getHeldItem() {
@@ -60,7 +60,7 @@ public final class SlotHandler extends Module {
         currentSlot.set(-1);
     }
 
-    @SubscribeEvent(priority = EventPriority.LOWEST)
+    @EventListener(priority = -2)
     public void onPreUpdate(PreUpdateEvent event) {
         switch ((int) mode.getInput()) {
             case 0:

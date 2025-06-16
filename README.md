@@ -1,3 +1,4 @@
+
 <div align="center">
   
 # Raven XD
@@ -24,12 +25,15 @@ Raven B4, but not only for Hypixel.
 ![Screenshot 2024-08-13 084510](https://github.com/user-attachments/assets/85637f18-9d6b-47d9-9dc2-cb8594aff585)
 </div>
 
+### Is this safe to use?
+Yes. The only versions that are possibly unsafe are 3.0 and 3.0.1. Proceed with caution, otherwise you are fine.
+
 ## How do I install this client?
 
 ### Steps:
 
 1. **Download the latest .jar file from the releases**:
-   - Download from [https://github.com/xia-mc/Raven-XD/releases](https://github.com/xia-mc/Raven-XD/releases)
+   - Download from [https://github.com/Project-XD/Raven-XD/releases](https://github.com/xia-mc/Raven-XD/releases)
    - This client requires Forge 1.8.9.
 
 2. **Put in mods folder of your .minecraft directory**:
@@ -61,7 +65,7 @@ Raven B4, but not only for Hypixel.
 4. **Clone the Repository**:
    - Run the following commands in the terminal or command prompt:
      ```bash
-     git clone --recursive https://github.com/xia-mc/Raven-XD.git
+     git clone --recursive https://github.com/Project-XD/Raven-XD.git
      cd Raven-XD
      ```
 
@@ -81,8 +85,6 @@ Raven B4, but not only for Hypixel.
 Feel free to raise an issue or submit a pull request.
 
 If you want to co-develop this project with me, please contact me.
-
-You can also support us on [Patreon](https://www.patreon.com/xia__mc)!
 
 <div align="center">
 
