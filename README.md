@@ -1,7 +1,7 @@
 
 <div align="center">
   
-# Raven XD
+# Raven XD_
 <p align="center">
     <img src="https://img.shields.io/github/issues/xia-mc/Raven-bS?style=flat" alt="issues">
     <img src="https://img.shields.io/badge/license-GPLV3-green" alt="License">
